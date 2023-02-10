@@ -1,0 +1,38 @@
+{% extends 'accounts/layouts/base.html' %}
+
+{% block content %}
+<section class="contact">
+    <div  class="form-container">
+        <div class="line">
+        </div>
+        <form  class="form-form" method="post">
+            {% csrf_token %}
+            {% if form.non_field_errors.errors %}
+                {% for error in form.non_field_errors.errors %}
+                    <p class="text-danger"><strong>{{error}}</strong></p>
+                {% endfor %}
+            {% endif %}
+            {% for field in form %}
+                <div class="form">
+                    {{ field.label_tag }}
+                    {{ field }}
+                </div>
+            {% endfor %}
+            {% if field.errors %}
+                {% for error in field.errors %}
+                    <p class="text-danger"><strong><i>{{error}}</i></strong></p>
+                {% endfor %}
+            {% endif %}
+            <div class="connexion-option">
+                <a href="">Mot de passe oublier ?</a>
+                <a href="{% url 'accounts:register' %}">Sign up</a>
+            </div>
+            <div class="connexion-btn-container">
+                <button class="btn" type="submit">Connexion</button>
+            </div>
+        </form>
+    </div> 
+</section>
+{% endblock content %}
+    
+    

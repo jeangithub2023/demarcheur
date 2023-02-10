@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'menage/css/style.css' %}">
+{% endblock stylesheets %}
+
+{% block js %}
+    <script type="text/javascript" src=" {% static 'menage/js/menage.js' %} "></script>
+{% endblock js %}

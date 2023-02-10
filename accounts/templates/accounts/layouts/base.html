@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
+{% endblock stylesheets %}
+
+{% block js %}
+    <script type="text/javascript" src=" {% static 'accounts/js/accounts.js' %} "></script>
+{% endblock js %}

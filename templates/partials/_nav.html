@@ -1,0 +1,20 @@
+
+<header>
+    <div class="logo">Demarcheur</div>
+    <ul class="menuLink">
+        <li><a href="{% url 'menage:home' %}">Home</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">A propos</a></li>
+    </ul>
+    
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'accounts:logout' %}" class="btn-sigin">LogOut</a>
+    {% else %}
+        <a href="{% url 'accounts:login' %}" class="btn-sigin">Connexion</a>
+    {% endif %}
+        
+    <img src="../../static/images/hanbuger-open.png" alt="" class="hanbuger-open">
+    <img src="../../static/images/hanbuger-close.png" alt="" class="hanbuger-close">
+</header>
+
+    

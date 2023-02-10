@@ -1,0 +1,31 @@
+{% extends 'menage/layouts/base.html' %}
+
+
+{% block content %}
+<div class="banner">
+    <h2>Demarcheur </h2>
+    <p>Service pro pour entreprise et particulier</p>
+</div>
+<div class="slogan">
+    Nous vous aidons dans votre quotidient
+</div>
+<div class="container-service">
+    <section class="service">
+        {% for menu in menus %}
+        <a href=" {% url 'menage:detail' menu.id %} ">
+            <div class="card hidden">
+                <img src=" {{ menu.image.url }} " alt="Pas d'image">
+                <div class="card-body">
+                    <h2 class="service-name">{{ menu.name }}</h2>
+                    <p> {{menu.description|truncatewords:30}}</p>
+                </div>
+            </div>
+        </a>  
+        {% endfor %}
+            
+    </section>
+</div>
+
+{% endblock content %}
+    
+    
