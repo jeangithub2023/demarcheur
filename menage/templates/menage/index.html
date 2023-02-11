@@ -9,14 +9,14 @@
 <div class="slogan">
     Nous vous aidons dans votre quotidient
 </div>
-<div class="container-service">
-    <section class="service">
+<div class="container-menu">
+    <section class="menu">
         {% for menu in menus %}
         <a href=" {% url 'menage:detail' menu.id %} ">
             <div class="card hidden">
                 <img src=" {{ menu.image.url }} " alt="Pas d'image">
                 <div class="card-body">
-                    <h2 class="service-name">{{ menu.name }}</h2>
+                    <h2 class="menu-name">{{ menu.name }}</h2>
                     <p> {{menu.description|truncatewords:30}}</p>
                 </div>
             </div>

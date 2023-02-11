@@ -4,25 +4,40 @@
 <section class="detail-section">
     <div class="detail-container">
         <div class="detail-image">
-            <img src=" {{ service.image.url }} " alt="Pas d'image">
+            <img src=" {{ menu.image.url }} " alt="Pas d'image">
         </div>
         <div class="detail-cnt">
-            <div class="service-name">
-                <h2> {{service.name}} </h2>
-            </div>
-            <div class="detail-desc">
-                {{service.description}}
+            <div class="detail-desc-cnt">
+                <div class="menu-name">
+                    <h2> {{menu.name}} </h2>
+                </div>
+                <div class="detail-desc">
+                    {{menu.description}}
+                </div>
             </div>
             <hr class="trait">
+            <div class="detail-service-cnt">
+                <h2 class="titre">Choississez un service</h2>
+                {% for service in services %}
+                <a href=" {% url 'menage:menage' service.id %} ">
+                    <div class="card-service">
+                        <img src="{{ service.image.url }}" alt="">
+                        <div class="card-service-body">
+                            <h3> {{ service.name }}</h3>
+                            <!-- <p>{{ service.description|truncatewords:7 }}</p> -->
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
             <div class="detail-option">
                 <a href="{% url 'menage:contact' %}" class="btn">Nous Contacter</a>
             </div>
         </div>
-        <div>
-            <h2 class="titre">Pourquoi nous contacter ?</h2>
-            <p>-Vous ganez du temps et benificiez d'un service de ménages professionnel de qualité. <br>
-            -les prestations qui s'adaptent à vos horaires: les agents de notre entreprise peuvent respecter certains horaires de ménage prédéfinis.
-            </p>
+        <!-- <div></div> -->
+        <div class="pourquoi">
+            <h5>Pourquoi Nous choisir ?</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br> Quas dicta esse quos minima quasi dolorem repellat sapiente adipisci quod perspiciatis nostrum expedita, <br> facilis veritatis hic velit eligendi nulla eveniet! Sunt?</p>
         </div>
     </div>
 </section>
