@@ -271,11 +271,34 @@ form{
 
 .modal-content{
     display: none;
+    z-index: 10;
 
 }
 .modal-content.modal-open{
     display: flex;
 }
+
+.contact{
+    margin-top: 8vh;
+    padding: 20px;
+}
+.contact-cnt{
+    margin: 50px;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+textarea{
+    outline: 1px bold;
+    border-inline-color: red;
+    background-color: #94f7e6;
+}
+
 @media screen and (max-width:900px){
     .slogan{
         font-size: 1.2rem;

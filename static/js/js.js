@@ -15,3 +15,4 @@ hanbugerClose.addEventListener('click',()=>{
     hanbugerClose.classList.remove("vue")
     sigin.classList.remove("open")
 })
+

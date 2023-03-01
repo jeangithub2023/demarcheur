@@ -1,3 +1,4 @@
+
 // ============Animation services=============
 
 const observer= new IntersectionObserver((entries)=>{
@@ -48,8 +49,4 @@ btnPart.addEventListener('click', () => {
     }
 })
 
-const bntOpenModal= document.getElementById('bntOpenModal');
-bntOpenModal.addEventListener('click', () =>{
-    const modalContent= document.getElementById('modal-content');
-    modalContent.classList.add('modal-open');
-});
+

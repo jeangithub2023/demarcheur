@@ -29,9 +29,20 @@
         </div>
         <div class="soumettre-btn">
             <a id="bntcloseModal" class="btn">Annuler</a>
-            <button id="bntOpenModal" class="btn">Valider</button>
-            <!-- <a id="bntOpenModal" class="btn">Valider</a> -->
+            <a id="bntOpenModal" class="btn">Valider</a>
         </div>
     </div>
 </section>
 {% endblock content %}
+
+{% block js %}
+    <script>
+        const bntOpenModal= document.getElementById('bntOpenModal');
+        bntOpenModal.addEventListener('click', () =>{
+            const modalContent= document.getElementById('modal-content');
+            modalContent.classList.add('modal-open');
+        });
+    </script>
+
+{% endblock js %}
+    
