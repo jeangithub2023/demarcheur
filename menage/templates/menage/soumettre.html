@@ -1,0 +1,37 @@
+{% extends 'menage/layouts/base.html' %}
+
+{% block content %}
+<section class="soumettre">
+    <div id="modal-content" class="modal-content">
+        <div class="icon-succes"></div>
+        <div class="message-succes">
+            <h3 class="titre">
+                Votre Demande à été envoyer avec succès,<br>
+            Nous vous recontacterons le plutôt possible pour la suite à votre demande!
+            </h3>
+        </div>
+        <div class="soumettre-btn-cnt">
+            <a href="" class="btn modal-close">ok</a>
+        </div>
+    </div>
+    <div class="soumettre-container">
+        <div class="icon-succes"></div>
+        <div class="message-succes">
+            
+            <h3 class="titre">
+                Mr {{name}} <br>
+                tel : {{tel}} <br>
+                email : {{email}} <br>
+                adresse : {{adresse}} <br>
+                Vous avez demander un service de {{service.name}},<br>
+                Voulez-vous confirmez votre demande!
+            </h3>
+        </div>
+        <div class="soumettre-btn">
+            <a id="bntcloseModal" class="btn">Annuler</a>
+            <button id="bntOpenModal" class="btn">Valider</button>
+            <!-- <a id="bntOpenModal" class="btn">Valider</a> -->
+        </div>
+    </div>
+</section>
+{% endblock content %}
