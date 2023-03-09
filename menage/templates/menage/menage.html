@@ -3,10 +3,8 @@
 {% block content %}
 <section class="detail-section">
     <div class="detail-container">
-        <div class="detail-image">
+        <div class="detail-image cadre">
             <img src=" {{ service.image.url }} " alt="Pas d'image">
-        </div>
-        <div class="detail-cnt">
             <div class="detail-desc-cnt">
                 <div class="menu-name">
                     <h2> {{service.name}} </h2>
@@ -15,8 +13,11 @@
                     {{service.description}}
                 </div>
             </div>
+        </div>
+        <div class="detail-cnt">
+            
             <hr class="trait">
-            <div class="detail-service-cnt">
+            <div class="detail-service-cnt cadre">
                 <h2 class="titre">Soumettre votre demande</h2>
                 <div class="demande-form">
                     <div class="demande-header">
@@ -51,9 +52,9 @@
                     </div>
                 </div>
             </div>
-            <div class="detail-option">
-                <a href="{% url 'menage:contact' %}" class="btn">Nous Contacter</a>
-            </div>
+        </div>
+        <div class="detail-option">
+            <a href="{% url 'menage:contact' %}" class="btn">Nous Contacter</a>
         </div>
     </div>
 </section>
