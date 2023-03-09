@@ -27,6 +27,9 @@ def detail(request, id):
 def contact(request):
     return render(request, 'menage/contact.html')
 
+def apropos(request):
+    return render(request, 'menage/apropos.html')
+
 def menage(request,id):
     service=get_object_or_404(Services,id=id)
     if service.menu.name=="immobilier":

@@ -3,8 +3,8 @@
     <div class="logo">Demarcheur</div>
     <ul class="menuLink">
         <li><a href="{% url 'menage:home' %}">Home</a></li>
-        <li><a href="">Contact</a></li>
-        <li><a href="">A propos</a></li>
+        <li><a href="{% url 'menage:contact' %}" >Contact</a></li>
+        <li><a href="{% url 'menage:apropos' %}">A propos</a></li>
     </ul>
     
     {% if request.user.is_authenticated %}

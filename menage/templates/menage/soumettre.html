@@ -14,15 +14,18 @@
             <a href="" class="btn modal-close">ok</a>
         </div>
     </div>
-    <div class="soumettre-container">
+    <div id="sounmettreContainer" class="soumettre-container">
         <div class="icon-succes"></div>
         <div class="message-succes">
             
-            <h3 class="titre">
+            <h4>
                 Mr {{name}} <br>
                 tel : {{tel}} <br>
                 email : {{email}} <br>
                 adresse : {{adresse}} <br>
+            </h4>
+            <br>
+            <h3 class="titre">
                 Vous avez demander un service de {{service.name}},<br>
                 Voulez-vous confirmez votre demande!
             </h3>
@@ -37,10 +40,12 @@
 
 {% block js %}
     <script>
+        var sounmettreContainer=document.getElementById('sounmettreContainer')
         const bntOpenModal= document.getElementById('bntOpenModal');
         bntOpenModal.addEventListener('click', () =>{
             const modalContent= document.getElementById('modal-content');
             modalContent.classList.add('modal-open');
+            sounmettreContainer.classList.add('cacher')
         });
     </script>
 
